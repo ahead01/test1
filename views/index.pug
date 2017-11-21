@@ -1,0 +1,13 @@
+extends layout
+block content
+  include navbar
+  section.jumbotron.text-center
+    .container-fluid
+      h1.jumbotron-heading= title
+      p.lead.text-muted
+        | Welcome to #{title}
+      div.btn-group-lg
+        a.btn.btn-primary.m-2(href='/menu') Menu
+        a.btn.btn-primary.m-2(href='/admin') Administration
+
+

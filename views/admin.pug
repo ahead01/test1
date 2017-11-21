@@ -1,0 +1,11 @@
+extends layout
+block content
+    include navbar
+    .jumbotron-fluid
+        .container-fluid
+            h1.jumbotron-heading= title
+            p.lead.text-muted
+                | Welcome to #{title}
+            div.btn-group-lg
+                a.btn-link(href="/admin/create/pizza")
+                    | Add New Pizza

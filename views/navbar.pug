@@ -1,0 +1,14 @@
+nav.navbar.navbar-expand-md.navbar-light.bg-faded.fixed-top
+    button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarTogglerDemo02', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    a.navbar-brand(href='#') Pizza Shop
+    #navbarTogglerDemo02.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto.mt-2.mt-md-0
+            li.nav-item.active
+                a.nav-link(href='/')
+                    | Home
+                    span.sr-only (current)
+            li.nav-item
+                a.nav(href='/menu') Menu
+            li.nav-item
+                a.nav-link(href='/admin') Admin

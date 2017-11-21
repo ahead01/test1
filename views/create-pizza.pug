@@ -1,0 +1,25 @@
+extends layout
+block content
+    include navbar
+    .jumbotron-fluid
+        .container-fluid
+            .h1= title
+            form.form(action="/admin/create/pizza", method="post")
+                h2
+                p.form-text Please fill out the form to create a new pizza in the database.
+                label.sr-only(for='inUser') Name
+                input#inUser.form-control(type='text', placeholder='Sample Pizza', required='true', autofocus='true', name="name", default="SamplePizza")
+                label.sr-only(for='inDesc') Description
+                input#inDesc.form-control(type='text', placeholder="Sample description of a pizza.", required='true', name="desc", default="Sample Description of a pizza.")
+                br
+                div.form-group
+                    label.small.p-2 $ Small:
+                    input#inSmall(type='number', name="price.sm")
+
+                    label.small.p-2 $ Medium:
+                    input#inMed(type='number', name="price.md")
+
+                    label.small.p-2 $ Large:
+                    input#inLg(type='number', name="price.lg")
+
+                button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit

@@ -1,0 +1,16 @@
+extends layout
+block content
+    include navbar
+    .album.text-muted.text-center
+        h1.jumbotron-heading #{title}
+        .jumbotron-fluid
+            .row
+                each pizza in pizzas
+                    card.card
+                        h3.card-title #{pizza.name}
+                        p.card-text #{pizza.desc}
+                        div.container-fluid
+                            div.btn-group-sm
+                                button.btn.p-2 Small: $#{pizza.price.sm}
+                                button.btn.p-2 Medium: $#{pizza.price.md}
+                                button.btn.p-2 Large: $#{pizza.price.lg}
